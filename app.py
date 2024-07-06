@@ -1,3 +1,7 @@
-# Write a simple python program that prints out the string "Hello, World!" to the console
+from flask import Flask 
 
-print("Hello world. Docker working!")
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
